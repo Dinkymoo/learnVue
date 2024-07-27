@@ -2,15 +2,19 @@ const app = Vue.createApp({
   data() {
     return {
       counter: 0,
+      userName: ''
     };
   },
   methods: {
-    addToCounter() {
-      this.counter++;
+    add(num) {
+      this.counter = this.counter + num;
     },
-    removeFromCounter() {
-      this.counter--;
+    subtract(num) {
+      this.counter = this.counter - num;
     },
+    setName(event, lastName) {
+   this.userName = event.target.value + " " + lastName;
+    }
   },
 });
 

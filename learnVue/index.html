@@ -18,9 +18,11 @@
     </header>
     <section id="events">
       <h2>Events in Action</h2>
-      <button v-on:click="addToCounter">Add</button>
-      <button v-on:click="removeFromCounter">Remove</button>
+      <button v-on:click="add(1)">Add</button>
+      <button v-on:click="subtract(1)">Remove</button>
       <p>Result: {{ counter }}</p>
+      <input type="text" v-on:input="setName($event, 'lastName')">
+      <p>Your Name: {{userName}}</p>
     </section>
   </body>
 </html>
