@@ -4,7 +4,7 @@ const app = Vue.createApp({
     return {
       //always an object
       courseGoalA: "Finish the Vue course!",
-      courseGoalB: "Learn more Vue!",
+      courseGoalB: "<h2 style='color:white'>Learn more Vue!</h2>",
       vueLink: "http://vueja.org",
     };
   },
