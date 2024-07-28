@@ -24,10 +24,12 @@
       <p>Result: {{ counter }}</p>
         <!-- prevent reload -->
       <form v-on:submit.prevent="submitForm"> 
+     <!-- v-model is a shortcut for v-on:input and v-bind:value -->
+      <!-- two way binding -->
       <input 
       type="text" 
-      v-on:input="setName($event, 'lastName')" 
-      v-on:keyup.enter="confirmUserName">
+      v-model="confimedUserNamme">
+      <button v-on:click="resetInput">Reset Input</button>
       <p>Your Name: {{confimedUserNamme}}</p>
       </form>
     </section>

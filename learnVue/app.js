@@ -20,8 +20,12 @@ const app = Vue.createApp({
       //alert();
     },
     confirmUserName() {
-       this.confimedUserNamme = this.userName;
+      this.confimedUserNamme = this.userName;
     },
+    resetInput() {
+      this.name = "";
+       this.confimedUserNamme ="";
+    }
   },
 });
 
