@@ -16,6 +16,8 @@
     <header>
       <h1>Vue Events</h1>
     </header>
+    <!-- any non event bound method will be updated when the screen changes -->
+     <!-- this makes methods a less viable solution when outputting values  -->
     <section id="events">
       <h2>Events in Action</h2>
       <button v-on:click="add(1)">Add</button>
@@ -25,12 +27,12 @@
         <!-- prevent reload -->
       <form v-on:submit.prevent="submitForm"> 
      <!-- v-model is a shortcut for v-on:input and v-bind:value -->
-      <!-- two way binding -->
+     <!-- two way binding -->
       <input 
       type="text" 
-      v-model="confimedUserNamme">
+      v-model="userName">
       <button v-on:click="resetInput">Reset Input</button>
-      <p>Your Name: {{confimedUserNamme}}</p>
+      <p>Your Name: {{fullName}}</p>
       </form>
     </section>
   </body>

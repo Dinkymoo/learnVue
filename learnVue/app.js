@@ -3,8 +3,16 @@ const app = Vue.createApp({
     return {
       counter: 0,
       userName: "",
-      confimedUserNamme: "",
     };
+  },
+  computed: {
+    fullName() {
+      console.log(
+        "run again...."
+      )
+      if (this.userName === "") return "";
+      return this.userName + " van Graan";
+    },
   },
   methods: {
     add(num) {
@@ -13,19 +21,14 @@ const app = Vue.createApp({
     subtract(num) {
       this.counter = this.counter - num;
     },
-    setName(event, lastName) {
-      this.userName = event.target.value + " " + lastName;
-    },
+
     submitForm(event) {
       //alert();
     },
-    confirmUserName() {
-      this.confimedUserNamme = this.userName;
-    },
+
     resetInput() {
-      this.name = "";
-       this.confimedUserNamme ="";
-    }
+      this.userName = "";
+    },
   },
 });
 
