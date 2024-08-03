@@ -1,35 +1,22 @@
 const app = Vue.createApp({
   data() {
     return {
-      counter: 0,
-      userName: "",
+      boxASelected: false,
+      boxBSelected: false,
+      boxCSelected: false,
     };
   },
-  computed: {
-    fullName() {
-      console.log(
-        "run again...."
-      )
-      if (this.userName === "") return "";
-      return this.userName + " van Graan";
-    },
-  },
   methods: {
-    add(num) {
-      this.counter = this.counter + num;
-    },
-    subtract(num) {
-      this.counter = this.counter - num;
-    },
-
-    submitForm(event) {
-      //alert();
-    },
-
-    resetInput() {
-      this.userName = "";
+    boxSelected(box) {
+      if (box === 'A') {
+        this.boxASelected = true;
+      } else if (box === 'B') {
+        this.boxBSelected = true;
+      } else if (box === 'C') {
+        this.boxCSelected = true;
+      }
     },
   },
 });
 
-app.mount('#events');
+app.mount('#styling');
